@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift3_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGI-gF-V2Z">
+                                <state key="normal" title="Rain"/>
+                                <connections>
+                                    <action selector="tapDidChangeRainning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gZ4-4L-Als"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WS-oV-BVr">
+                                <state key="normal" title="Sun"/>
+                                <connections>
+                                    <action selector="tapDidChangeSunny:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eVS-m4-4Ao"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vux-2E-899">
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3WS-oV-BVr" firstAttribute="baseline" secondItem="aGI-gF-V2Z" secondAttribute="baseline" id="4PT-ef-wVK"/>
+                            <constraint firstItem="Vux-2E-899" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AwQ-nK-Qrg"/>
+                            <constraint firstAttribute="trailing" secondItem="Vux-2E-899" secondAttribute="trailing" id="Vgf-YP-Qlh"/>
+                            <constraint firstItem="3WS-oV-BVr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="Yr1-Bp-WMW"/>
+                            <constraint firstItem="Vux-2E-899" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zvh-4h-mai"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3WS-oV-BVr" secondAttribute="bottom" constant="157" id="gm7-bi-vRI"/>
+                            <constraint firstItem="Vux-2E-899" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kbF-zp-Ajd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aGI-gF-V2Z" secondAttribute="trailing" constant="57" id="l0v-Fc-HAh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="weatherLabel" destination="Vux-2E-899" id="Zcg-x4-D1n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
