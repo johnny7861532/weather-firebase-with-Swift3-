@@ -15,13 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     
-    override init() {
-        // Firebase Init
-        FIRApp.configure()
-    }
+//    override init() {
+//        // Firebase Init
+//        FIRApp.configure()
+//    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        FIRApp.configure()
         return true
     }
 

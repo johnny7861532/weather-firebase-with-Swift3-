@@ -9,43 +9,44 @@
 import UIKit
 import FirebaseDatabase
 class ViewController: UIViewController {
-    let weatherRef = FIRDatabase.database().reference().child("weather")
-
+    
     @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var weatherImage : UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        observeData()
+        obseverData()
         self.weatherLabel.isHidden = false
+        self.weatherImage.isHidden = true
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    func observeData(){
-        self.weatherRef.observe(.value, with: { (snapshot) in
-            self.weatherLabel.text = snapshot.value as? String
+    func obseverData(){
+        let weatherRef = FIRDatabase.database().reference().child("weather")
         
-        
-        
-        
+        weatherRef.observe(.value, with: { (snapshot) in
+           self.weatherLabel.text = snapshot.value as? String
+            
+            
         })
-    
-    
-    
-    
-    
-    
     }
 
+    
+    
+    
     @IBAction func tapDidChangeSunny(_ sender: AnyObject) {
-        self.weatherRef.setValue("Sunny")
-        print(self.weatherLabel.text)
+       Helper.helper.changeValue(weather: "Sunny")
+        self.weatherImage.image = #imageLiteral(resourceName: "sunny-icon-9")
+        self.weatherImage.isHidden = false
     }
     @IBAction func tapDidChangeRainning(_ sender: AnyObject) {
-        self.weatherRef.setValue("Rainning")
-        print(self.weatherLabel.text)
+        Helper.helper.changeValue(weather: "Raining")
+        self.weatherImage.image = #imageLiteral(resourceName: "rain-cloud-icon-5")
+        self.weatherImage.isHidden = false
 
+        
     }
-    }
+}
 

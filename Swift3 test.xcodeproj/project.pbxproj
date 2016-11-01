@@ -14,6 +14,7 @@
 		7729730B1DA344CA00215FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7729730A1DA344CA00215FDC /* Assets.xcassets */; };
 		7729730E1DA344CA00215FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7729730C1DA344CA00215FDC /* LaunchScreen.storyboard */; };
 		772973161DA3457500215FDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 772973151DA3457500215FDC /* GoogleService-Info.plist */; };
+		77B284261DC7938800E78AD3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B284251DC7938800E78AD3 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		7729730D1DA344CA00215FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7729730F1DA344CA00215FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		772973151DA3457500215FDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77B284251DC7938800E78AD3 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		A805400EA8D0EB7629645A74 /* Pods_Swift3_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift3_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				7729730A1DA344CA00215FDC /* Assets.xcassets */,
 				7729730C1DA344CA00215FDC /* LaunchScreen.storyboard */,
 				7729730F1DA344CA00215FDC /* Info.plist */,
+				77B284251DC7938800E78AD3 /* Helper.swift */,
 			);
 			path = "Swift3 test";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				772973061DA344CA00215FDC /* ViewController.swift in Sources */,
+				77B284261DC7938800E78AD3 /* Helper.swift in Sources */,
 				772973041DA344CA00215FDC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,22 +16,40 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGI-gF-V2Z">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BUm-OK-W3P"/>
+                                    <constraint firstAttribute="width" constant="30" id="h92-qk-1XS"/>
+                                </constraints>
                                 <state key="normal" title="Rain"/>
                                 <connections>
                                     <action selector="tapDidChangeRainning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gZ4-4L-Als"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WS-oV-BVr">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="2fz-4K-tGN"/>
+                                    <constraint firstAttribute="height" constant="30" id="cJx-Qj-4s3"/>
+                                </constraints>
                                 <state key="normal" title="Sun"/>
                                 <connections>
                                     <action selector="tapDidChangeSunny:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eVS-m4-4Ao"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90D-ip-fAo">
+                                <frame key="frameInset" minX="120" minY="148" width="80" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Qt5-Me-dvj"/>
+                                    <constraint firstAttribute="width" constant="80" id="mn5-m4-eWN"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vux-2E-899">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="3oZ-x3-gJQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,17 +57,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3WS-oV-BVr" firstAttribute="baseline" secondItem="aGI-gF-V2Z" secondAttribute="baseline" id="4PT-ef-wVK"/>
-                            <constraint firstItem="Vux-2E-899" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AwQ-nK-Qrg"/>
-                            <constraint firstAttribute="trailing" secondItem="Vux-2E-899" secondAttribute="trailing" id="Vgf-YP-Qlh"/>
-                            <constraint firstItem="3WS-oV-BVr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="Yr1-Bp-WMW"/>
-                            <constraint firstItem="Vux-2E-899" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zvh-4h-mai"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3WS-oV-BVr" secondAttribute="bottom" constant="157" id="gm7-bi-vRI"/>
-                            <constraint firstItem="Vux-2E-899" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kbF-zp-Ajd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aGI-gF-V2Z" secondAttribute="trailing" constant="57" id="l0v-Fc-HAh"/>
+                            <constraint firstItem="3WS-oV-BVr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="315" id="COv-8B-6We"/>
+                            <constraint firstItem="Vux-2E-899" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NFK-Cm-z74"/>
+                            <constraint firstAttribute="trailing" secondItem="Vux-2E-899" secondAttribute="trailing" id="Sur-64-1iL"/>
+                            <constraint firstItem="90D-ip-fAo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tst-En-Epd"/>
+                            <constraint firstItem="3WS-oV-BVr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="UDZ-IZ-EU2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vux-2E-899" secondAttribute="bottom" constant="148" id="k5Z-h1-yP7"/>
+                            <constraint firstItem="aGI-gF-V2Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="315" id="l2G-Bu-NZv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aGI-gF-V2Z" secondAttribute="trailing" constant="30" id="wuU-WP-g8E"/>
+                            <constraint firstItem="90D-ip-fAo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="yQr-i0-NVq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="weatherImage" destination="90D-ip-fAo" id="Nva-0g-snO"/>
                         <outlet property="weatherLabel" destination="Vux-2E-899" id="Zcg-x4-D1n"/>
                     </connections>
                 </viewController>
